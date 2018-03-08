@@ -7,12 +7,12 @@ echo "2 for Enterprise or 3 for Professional"
 read _WindowsEnvironment
 case $_WindowsEnvironment in
   2)
-    _WindowsDestination="/home/du/Pictures/Enterprise_Walls/"
+    _WindowsDestination="/home/du/Pictures/_Enterprise_Walls/OneDrive/_Walls/"
     echo "Destination folder has been setup to Enterprise environment. Ready to copy?"
     read -t 5
     ;;
     3)
-    _WindowsDestination="/home/du/Pictures/Professional_Walls/"
+    _WindowsDestination="/home/du/Pictures/Professional_Walls/OneDrive/_Walls/"
     echo "Destination folder has been setup to Professional environment. Ready to copy?"
     read -t 5
     ;;
@@ -34,6 +34,7 @@ echo "How many files at Bing folder?"
 ls ${_BingSource} | wc -w
 read -p "Hit enter to copy all the .jpg files from Bing folder to _Walls main repository !"
 mv -v ${_BingSource} ${_WindowsDestination}
+read - p "Hit enter..."
 clear
 
 #For Desktoppr service folder
